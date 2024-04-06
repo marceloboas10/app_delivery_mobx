@@ -1,6 +1,7 @@
 import 'package:app_delivery_mobx/components/contador.dart';
 import 'package:app_delivery_mobx/models/item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
 class Cartao extends StatelessWidget {
   const Cartao({super.key, required this.item});
@@ -26,16 +27,21 @@ class Cartao extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8),
-              child: Text(
-                item.nome,
-                style: const TextStyle(fontWeight: FontWeight.w600),
+              child: FittedBox(
+                child: Text(
+                  item.nome,
+                  style: const TextStyle(fontWeight: FontWeight.w600),
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
               child: Text("R\$ ${item.preco.toStringAsFixed(2)}"),
             ),
-            Contador(),
+            Observer(
+                builder: (_) => Contador(
+                      item: item,
+                    )),
           ],
         ),
       ),

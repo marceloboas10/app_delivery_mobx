@@ -1,15 +1,15 @@
 import 'package:app_delivery_mobx/models/item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class OrderItem extends StatelessWidget {
-
-  const OrderItem({ super.key,required this.item });
+  const OrderItem({super.key, required this.item});
 
   final Item item;
 
-   @override
-   Widget build(BuildContext context) {
-       return Padding(
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,10 +29,13 @@ class OrderItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
+                children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text(item.nome, style: const TextStyle(fontWeight: FontWeight.w600),),
+                    child: Text(
+                      item.nome,
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
                   ),
                   Text(item.preco.toStringAsFixed(2)),
                 ],

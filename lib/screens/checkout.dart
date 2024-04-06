@@ -1,12 +1,19 @@
+import 'package:app_delivery_mobx/components/order_item.dart';
 import 'package:app_delivery_mobx/components/payment_method.dart';
 import 'package:app_delivery_mobx/components/payment_total.dart';
+import 'package:app_delivery_mobx/store/carrinho_store.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Checkout extends StatelessWidget {
-  const Checkout({super.key});
+  const Checkout({super.key, required this.homeContext});
+  final BuildContext homeContext;
 
   @override
   Widget build(BuildContext context) {
+    final CarrinhoStore carrinhoStore =
+        Provider.of<CarrinhoStore>(homeContext, listen: false);
+
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -24,8 +31,8 @@ class Checkout extends StatelessWidget {
               ),
               SliverList(
                   delegate: SliverChildBuilderDelegate((context, index) {
-                return null;
-              }, childCount: 1)),
+                return OrderItem(item: carrinhoStore.listaCarrinho[index]);
+              }, childCount: carrinhoStore.quantidadeCarrinho)),
               const SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
@@ -47,8 +54,8 @@ class Checkout extends StatelessWidget {
                   ),
                 ),
               ),
-              const SliverToBoxAdapter(
-                child: PaymentTotal(total: 00.00),
+              SliverToBoxAdapter(
+                child: PaymentTotal(total: carrinhoStore.totalCompra),
               ),
               SliverFillRemaining(
                 hasScrollBody: false,

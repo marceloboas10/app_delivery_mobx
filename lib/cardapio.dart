@@ -4,17 +4,17 @@ const String _imageInitialPath = "assets/images";
 
 const List<Item> todosOsItems = [
   Item(
-      nome: "Chicken Salad",
+      nome: "Salada de Frango",
       categoria: "mais comprados",
       preco: 58.90,
       url: "$_imageInitialPath/chicken-salad.png"),
   Item(
-      nome: "Chicken Tender",
+      nome: "Frango Suculento",
       categoria: "mais comprados",
       preco: 49.90,
       url: "$_imageInitialPath/chicken-tender.png"),
   Item(
-      nome: "Cold Noodles",
+      nome: "Macarrão ao Vivo",
       categoria: "para o almoço",
       preco: 37.50,
       url: "$_imageInitialPath/cold-noodles.png"),
@@ -24,27 +24,27 @@ const List<Item> todosOsItems = [
       preco: 48.50,
       url: "$_imageInitialPath/hamburger-ink.png"),
   Item(
-      nome: "Lasagna",
+      nome: "Lasanha",
       categoria: "para dividir",
       preco: 55.00,
       url: "$_imageInitialPath/lasagna-bolognese.jpg"),
   Item(
-      nome: "Shrimp 'n rice",
+      nome: "Camarão com Arroz",
       categoria: "para dividir",
       preco: 68.50,
       url: "$_imageInitialPath/shrimp-n-rice.png"),
   Item(
-      nome: "Chicken Tortilla",
+      nome: "Tortilha de Frango",
       categoria: "mais comprados",
       preco: 35.50,
       url: "$_imageInitialPath/chicken-tortilla.png"),
   Item(
-      nome: "Coxinhas",
+      nome: "Coxinha",
       categoria: "mais comprados",
       preco: 15.00,
       url: "$_imageInitialPath/coxinhas.png"),
   Item(
-      nome: "Fish 'n Salsa",
+      nome: "Peixe e Salsa",
       categoria: "mais comprados",
       preco: 45.50,
       url: "$_imageInitialPath/fish-n-salsa.png"),
@@ -54,12 +54,12 @@ const List<Item> todosOsItems = [
       preco: 10.00,
       url: "$_imageInitialPath/pamonha.png"),
   Item(
-      nome: "Penne au sugo",
+      nome: "Penne ao Sugo",
       categoria: "para o almoço",
       preco: 25.00,
       url: "$_imageInitialPath/penne-au-sugo.png"),
   Item(
-      nome: "Rice 'n Beans",
+      nome: "Arroz e Feijão",
       categoria: "para dividir",
       preco: 35.00,
       url: "$_imageInitialPath/rice-n-beans.jpg"),
@@ -69,7 +69,7 @@ const List<Item> todosOsItems = [
       preco: 20.00,
       url: "$_imageInitialPath/spagetti.png"),
   Item(
-      nome: "Steak Veggies",
+      nome: "Bife com Pimentão",
       categoria: "mais comprados",
       preco: 68.00,
       url: "$_imageInitialPath/steak-veggies.png"),

@@ -1,5 +1,7 @@
 import 'package:app_delivery_mobx/screens/home.dart';
+import 'package:app_delivery_mobx/store/carrinho_store.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const Delivery());
@@ -11,12 +13,18 @@ class Delivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Delivery Mobx',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 255, 83, 83),
+        ),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: Provider(
+        create: (_) => CarrinhoStore(),
+        child: Home(),
+      ),
     );
   }
 }

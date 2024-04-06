@@ -14,7 +14,7 @@ class ItemList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxHeight: 150),
+        constraints: const BoxConstraints(maxHeight: 175),
         child: ListView.builder(
           itemBuilder: (context, index) {
             if (cardapio[index].categoria == categoria) {
